@@ -212,11 +212,11 @@ def main():
     Lindsay_result = Lindsay.shoot(bow=vincent, arrow=blue)
     shooters.append((Lindsay, vincent, blue))
 
-    Jon = Archer(name='Jon', skill=8, wingspan=72)
-    beryl.assemble()
-    Jon.draw(bow=beryl, arrow=blue)
-    Jon_result = Jon.shoot(bow=beryl, arrow=blue)
-    shooters.append((Jon, beryl, blue))
+    Claudia = Archer(name='Claudia', skill=2, wingspan=60)
+    edward.assemble()
+    Claudia.draw(bow=edward, arrow=blue)
+    Claudia_result = Claudia.shoot(bow=edward, arrow=blue)
+    shooters.append((Claudia, edward, blue))
 
     for shooter in shooters:
         archer = shooter[0]
