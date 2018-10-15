@@ -83,7 +83,7 @@ class Archer:
 
         if self.skill < 0:
             raise ValueError("Invalid skill; nobody is that bad!")
-        elif self.skill > 10: 
+        elif self.skill > 10:
             raise ValueError("Invalid skill; nobody is that good!")
 
     def get_draw_length(self):
@@ -173,36 +173,36 @@ class Archer:
         return shot_success
 
 def main():
-    
+
     # Choose a bow
     vincent = Bow(
-        brand='WNS', limb_colour='white', limb_len=12, 
+        brand='WNS', limb_colour='white', limb_len=12,
         limb_mat='wood-fibreglass', limb_weight=24,
         name='Vincent', riser_colour='blue',
         riser_len=25, riser_mat='aluminium')
     evalyn = Bow(
-        brand='Galaxy', limb_colour='black', limb_len=8, 
+        brand='Galaxy', limb_colour='black', limb_len=8,
         limb_mat='wood-fibreglass', limb_weight=20,
         name='Evalyn', riser_colour='blue',
         riser_len=23, riser_mat='aluminium')
     beryl = Bow(
-        brand='Hoyt', limb_colour='white', limb_len=9, 
+        brand='Hoyt', limb_colour='white', limb_len=9,
         limb_mat='carbon-foam', limb_weight=26,
         name='Beryl', riser_colour='grey',
         riser_len=26, riser_mat='aluminium')
     edward = Bow(
-        brand='Galaxy', limb_colour='white', limb_len=9, 
+        brand='Galaxy', limb_colour='white', limb_len=9,
         limb_mat='wood', limb_weight=18,
         name='Edward', riser_colour='brown',
         riser_len=23, riser_mat='wood')
-    
+
     # Choose an arrow
     red = Arrow(f_colour='red', n_fletch=3, s_length=25, s_material='carbon')
     blue = Arrow(f_colour='blue', n_fletch=3, s_length=26, s_material='carbon')
     pink = Arrow(f_colour='pink', n_fletch=3, s_length=27, s_material='aluminium')
     green = Arrow(f_colour='green', n_fletch=4, s_length=28, s_material='aluminium')
     purple = Arrow(f_colour='purple', n_fletch=4, s_length=29, s_material='carbon')
-    
+
     # Create an Archer instance for yourself!
     shooters = []
 
@@ -212,11 +212,11 @@ def main():
     Lindsay_result = Lindsay.shoot(bow=vincent, arrow=blue)
     shooters.append((Lindsay, vincent, blue))
 
-    Jon = Archer(name='Jon', skill=8, wingspan=72)
+    Donna = Archer(name='Donna', skill=5, wingspan=70)
     beryl.assemble()
-    Jon.draw(bow=beryl, arrow=blue)
-    Jon_result = Jon.shoot(bow=beryl, arrow=blue)
-    shooters.append((Jon, beryl, blue))
+    Donna.draw(bow=beryl, arrow=blue)
+    Jon_result = Donna.shoot(bow=beryl, arrow=blue)
+    shooters.append((Donna, beryl, blue))
 
     for shooter in shooters:
         archer = shooter[0]
