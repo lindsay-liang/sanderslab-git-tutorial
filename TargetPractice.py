@@ -218,6 +218,12 @@ def main():
     Jon_result = Jon.shoot(bow=beryl, arrow=blue)
     shooters.append((Jon, beryl, blue))
 
+    Jacob = Archer(name='Jacob', skill=5, wingspan=74)
+    beryl.assemble()
+    Jacob.draw(bow=beryl, arrow=green)
+    Jacob_result = Jon.shoot(bow=beryl, arrow=green)
+    shooters.append((Jacob, beryl, green))
+
     for shooter in shooters:
         archer = shooter[0]
         bow = shooter[1]
